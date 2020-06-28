@@ -1,9 +1,9 @@
 import React, { useContext, useState, useEffect } from 'react';
-import { WishListContex } from '../context/WishListProvider';
+import { WishListContext } from '../context/WishListProvider';
 import { Button, Icon } from 'semantic-ui-react';
 
 export const WishListBtn = ({ product }) => {
-    const [state, setState] = useContext(WishListContex);
+    const [state, setState] = useContext(WishListContext);
     const [isProductSelected, setSelected] = useState(false);
 
     function handleWishList() {

@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
-import { WishListContex } from '../context/WishListProvider';
+import { WishListContext } from '../context/WishListProvider';
 import { Label, Icon } from 'semantic-ui-react';
 
 export const Header = (props) => {
-    const [state] = useContext(WishListContex);
+    const [state] = useContext(WishListContext);
     const { wishList } = state;
 
     return (

@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 
-const WishListContex = React.createContext([{}, () => { }]);
+const WishListContext = React.createContext([{}, () => { }]);
 const WishListProvider = (props) => {
     const [state, setState] = useState({
         wishList: []
     });
 
     return (
-        <WishListContex.Provider value={[state, setState]}>
+        <WishListContext.Provider value={[state, setState]}>
             {props.children}
-        </WishListContex.Provider>
+        </WishListContext.Provider>
     );
 };
 
-export { WishListContex, WishListProvider };
+export { WishListContext, WishListProvider };
